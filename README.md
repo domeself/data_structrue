@@ -76,7 +76,7 @@
   >使用场景
   * 多插入、删除，少随机访问
   > 练习
-    * 链表反转
+  * 链表反转
          ```
           public void reverse(){
                   Node cur = header;
