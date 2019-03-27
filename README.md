@@ -77,7 +77,7 @@
   * 多插入、删除，少随机访问
   > 练习
   * 链表反转
-         ```
+    ```
           public void reverse(){
                   Node cur = header;
                   Node befor = null;
@@ -90,17 +90,17 @@
                   }
                   header = befor;
               }
-         ```
+    ```
   * 环检测
-        ```
+    ```
             快慢指针，slow每次行动一个Node，quick指针每次移动2个Node  
             如果quick指针走到尾之前，2个指针能遇到（相等），则说明有环
-        ```
+    ```
   * 找到链表的中间节点
-        ```
+    ```
             快慢指针，slow一次移动一个Node，quick一次移动2个Node  
             当quick移动到尾部时，slow节点就是中间节点（需要考虑奇偶性）
-        ```
+    ```
  ### 栈(stack)
  >特点：  
   * LIFO
