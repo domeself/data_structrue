@@ -161,10 +161,6 @@ public class OneWayLinkedList<T> implements Iterable {
                 cur = next;
         }
         header = befor;
-
-
-
-
     }
 
     private void swap(Node befor, Node slow) {

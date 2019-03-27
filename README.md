@@ -33,13 +33,16 @@
  //a数组长度m*n
  a[i][j]=firstAddress + offset * (i*n+j);
  ```
+ >使用场景
+ * 多随机访问，少删除、插入
  ### 链表(linked)
  >结构
   * 节点(node)  
-  包含若干指针和数据变量  
+    * 包含若干指针和数据变量  
   * 头节点(head)  
-  第一个节点
+    * 第一个节点
   * 尾节点(tail)
+    * 最后一个节点
  >优点
  * 长度可变
  * 插入删除快
@@ -51,12 +54,65 @@
  * 访问O(n)
  * 插入、删除O(1)
  >种类
- * 单向链表
+ * 单向链表  
+    ```
+    tail.next=null;
+     ```
  * 双向链表
+     ```
+    head.pre = null;
+    head.next=second;
+    second.pre=head;
+    ```
  * 循环链表
+    ```
+    tail.next=head;
+    ```
+ * 双向循环列表
+    ```
+    head.pre=tail;
+    tail.next=head;
+     ```
+  >使用场景
+  * 多插入、删除，少随机访问
+  * 练习
+    * 链表反转
+         ```
+          public void reverse(){
+                  Node cur = header;
+                  Node befor = null;
+                  Node next = null;
+                  while (cur!=null){
+                          next = cur.next;
+                          swap(befor,cur);
+                          befor = cur;
+                          cur = next;
+                  }
+                  header = befor;
+              }
+         ```
+    * 环检测
+        ```
+            快慢指针，slow每次行动一个Node，quick指针每次移动2个Node  
+            如果quick指针走到尾之前，2个指针能遇到（相等），则说明有环
+        ```
+    * 找到链表的中间节点
+        ```
+            快慢指针，slow一次移动一个Node，quick一次移动2个Node  
+            当quick移动到尾部时，slow节点就是中间节点（需要考虑奇偶性）
+        ```
  ### 栈(stack)
- >优点：
- >缺点：
+ >特点：  
+  * FILO
+  * 操作受限；只有出栈、入栈操作
+ >实现方式：
+  * 链表
+  * 数组
+ >应用：
+ * 函数调用
+ * 表达式求值
+ * 括号匹配
+ * 浏览器前进、后退
  ### 队列(queue)
  >优点：
  >缺点：
