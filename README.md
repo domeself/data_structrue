@@ -124,6 +124,7 @@
  * 循环队列
  * 阻塞队列
  * 并发队列
+ * 优先队列
  >应用：
  * Java concurrent 并发包利用，ArrayBlockingQueue 来实现公平锁等
  * 高性能队列 Disruptor
