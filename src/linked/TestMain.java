@@ -11,18 +11,15 @@ public class TestMain {
 
 
 
-     /*   OneWayLinkedList list  =new OneWayLinkedList<String>();
+      OneWayLinkedList list  =new OneWayLinkedList<String>();
        list.add(1);
         list.add(2);
         list.add(5);
         list.add(7);
         list.add(8);
         list.add(13);
-        list.getLastNode().next=list.getMidNode();
 
-        System.out.println(list.isRing());*/
 
-        System.out.println(1%6);
 
 
        /* OneWayLinkedList list2  =new OneWayLinkedList<String>();
@@ -35,10 +32,10 @@ public class TestMain {
 
 */
 
-     /*   list.reverse();
+      list.reverse();
         list.forEach(
             System.out::println
-        );*/
+        );
 
 
         //  list.deleteBack(-1);

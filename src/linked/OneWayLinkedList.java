@@ -156,7 +156,7 @@ public class OneWayLinkedList<T> implements Iterable {
         Node next = null;
         while (cur!=null){
                 next = cur.next;
-                swap(befor,cur);
+                cur.next=befor;
                 befor = cur;
                 cur = next;
         }
